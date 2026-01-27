@@ -444,24 +444,155 @@ ul {
   }
 }
 
-@media (max-width: 768px) {
-  .nav-toggle {
-    display: flex;
+/* Projects Page Styles */
+.hero-projects {
+  height: 80vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hero-projects-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("img/index/desde\ arriba.JPG") center/cover no-repeat;
+}
+
+.hero-projects-bg::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(27, 50, 17, 0.6); /* Dark green overlay */
+}
+
+.hero-projects-content {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  color: #fff;
+}
+
+.hero-projects-text {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.hero-projects-text p {
+  margin-bottom: 30px;
+  line-height: 1.4;
+}
+
+.etapas-section {
+  padding: 100px 0;
+  background-color: var(--bg-brown);
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.etapas-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("img/index/imagen3fondo.png") center/cover no-repeat;
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.etapas-grid {
+  position: relative;
+  z-index: 10;
+}
+
+.etapas-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.etapas-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.etapa-item {
+  margin-bottom: 40px;
+}
+
+.etapa-item h4 {
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.etapas-cta {
+  margin-top: 50px;
+}
+
+.btn-primary-alt {
+  background: #c55317;
+  color: #fff;
+  border: none;
+  padding: 15px 40px;
+  font-size: 24px;
+  font-weight: 700;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: inline-block;
+}
+
+.btn-primary-alt:hover {
+  background: #a04212;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.etapas-visuals {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.render-box {
+  background: #fff;
+  padding: 10px;
+  border-radius: 4px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+}
+
+.render-box:hover {
+  transform: scale(1.03);
+}
+
+.render-img {
+  width: 100%;
+  height: auto;
+  border-radius: 2px;
+}
+
+/* Responsive fixes for Projects */
+@media (max-width: 991px) {
+  .etapas-content {
+    grid-template-columns: 1fr;
+    text-align: center;
   }
-  .main-nav {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background: #fff;
-    padding: 20px;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  .etapas-visuals {
+    order: -1;
+    margin-bottom: 40px;
   }
-  .main-nav.active {
-    display: block;
-  }
-  .main-nav ul {
-    flex-direction: column;
+  .hero-projects-text p {
+    font-size: 24px;
   }
 }

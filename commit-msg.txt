@@ -1,7 +1,0 @@
-feat: Initial implementation of El Altillo landing page
-
-- Montserrat typography (49px/29px)
-- Sustainable theme design with glassmorphism
-- Responsive layout
-- Projects page placeholder
-- PDF documentation modal
