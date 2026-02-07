@@ -116,7 +116,7 @@ ul {
   left: 0;
   width: 100%;
   height: 100%;
-  background: url("img/index/desde\ arriba.JPG") center/cover no-repeat;
+  background: url("img/index/desde arriba.JPG") center/cover no-repeat;
   opacity: 0.8;
 }
 
@@ -218,6 +218,20 @@ ul {
   line-height: 1.3;
 }
 
+.font-24-regular {
+  font-family: var(--font-main);
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1.3;
+}
+
+.font-22-bold {
+  font-family: var(--font-main);
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 1.4;
+}
+
 .vivir-equilibrio .content p {
   margin-bottom: 30px;
   text-align: center;
@@ -248,6 +262,9 @@ ul {
 .video-placeholder {
   position: relative;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .video-caption,
@@ -264,62 +281,124 @@ ul {
   white-space: nowrap;
 }
 
-/* Partner Section */
-.partners-section {
-  padding: 100px 0;
-  background-color: var(--bg-brown);
-  color: #fff;
+/* ProMendoza Section */
+.promendoza-section {
+  display: flex;
 }
 
-.partner-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
-  align-items: center;
+.logo-promendoza {
+  width: 50% !important;
+  height: 50% !important;
+  border-radius: 25px;
+  object-fit: contain !important;
 }
 
-.partner-image {
-  position: relative;
-  transition: transform 0.3s;
+
+.promendoza-image {
+  background-image: url("img/index/fondo-banco-de-inversion.png");
+  width: 100%;
+  height: 100%;
 }
 
-.partner-image:hover {
-  transform: scale(1.02);
+.promendoza-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-.partner-logo-box {
+.promendoza-logo-box {
   position: absolute;
-  bottom: 20px;
-  right: 20px;
+  bottom: 30px;
+  left: 20px;
   background: #fff;
-  padding: 15px;
-  border-radius: 10px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  padding: 15px 20px;
+  border-radius: 0;
+  z-index: 10;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-.partner-logo-box img {
-  height: 40px;
+.promendoza-logo-box img {
+  height: 55px;
+  width: auto;
 }
 
-.partner-content {
-  padding: 20px;
+.promendoza-content {
+  background-color: #ac6d409a;
+  padding: 60px 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.partner-content h3 {
-  margin-bottom: 30px;
+.promendoza-title {
+  font-family: var(--font-main);
+  font-weight: 900;
+  font-size: 42px;
+  line-height: 1.2;
   color: #fff;
+  margin-bottom: 30px;
 }
 
-.btn-outline {
+.promendoza-title em {
+  font-style: italic;
+  font-weight: 900;
+}
+.seccion-links{
+  background-color: var(--bg-brown);
+  padding: 100px 50px;
+}
+
+.btn-promendoza {
+  display: inline-block;
   background: #fff;
   color: #c55317;
-  border: 1px solid #c55317;
-  padding: 12px 30px;
-  font-size: 1.2rem;
-  border-radius: 50px;
-  margin-bottom: 30px;
-  cursor: pointer;
+  border: none;
+  padding: 15px 45px;
+  font-size: 18px;
   font-weight: 700;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-align: center;
+  width: fit-content;
+  margin-bottom: 30px;
+}
+
+.btn-promendoza:hover {
+  background: #c55317;
+  color: #fff;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.promendoza-text {
+  font-family: var(--font-main);
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 1.5;
+  color: #fff;
+}
+
+/* News/Links Section */
+.news-section {
+  background: #c9a77d;
+  padding: 60px 0;
+  text-align: center;
+}
+
+.news-section h2 {
+  font-family: var(--font-main);
+  font-weight: 900;
+  font-size: 42px;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.news-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
 }
 
 /* Contact Section */
@@ -432,9 +511,21 @@ ul {
 
 /* Responsive */
 @media (max-width: 991px) {
-  .partner-grid,
+  .promendoza-grid,
   .contact-grid {
     grid-template-columns: 1fr;
+  }
+  .promendoza-image {
+    min-height: 350px;
+  }
+  .promendoza-content {
+    padding: 40px 30px;
+  }
+  .promendoza-title {
+    font-size: 32px;
+  }
+  .promendoza-text {
+    font-size: 18px;
   }
   .hero-card h1 {
     font-size: 35px;
@@ -460,7 +551,7 @@ ul {
   left: 0;
   width: 100%;
   height: 100%;
-  background: url("img/index/desde\ arriba.JPG") center/cover no-repeat;
+  background: url("img/index/desde arriba.JPG") center/cover no-repeat;
 }
 
 .hero-projects-bg::after {
@@ -496,6 +587,7 @@ ul {
   color: #fff;
   position: relative;
   overflow: hidden;
+  min-height: 600px;
 }
 
 .etapas-overlay {
@@ -505,7 +597,7 @@ ul {
   width: 100%;
   height: 100%;
   background: url("img/index/imagen3fondo.png") center/cover no-repeat;
-  opacity: 0.3;
+  opacity: 0.15;
   pointer-events: none;
 }
 
@@ -514,20 +606,8 @@ ul {
   z-index: 10;
 }
 
-.etapas-header {
-  text-align: center;
-  margin-bottom: 60px;
-}
-
 .etapas-content {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
-  align-items: start;
-}
-
-.etapa-item {
-  margin-bottom: 40px;
+  margin-top: 30px;
 }
 
 .etapa-item h4 {
@@ -559,21 +639,36 @@ ul {
 }
 
 .etapas-visuals {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
+  position: relative;
+  height: 500px;
+  width: 100%;
 }
 
 .render-box {
   background: #fff;
-  padding: 10px;
+  padding: 8px;
   border-radius: 4px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  position: absolute;
+  max-width: 80%;
   transition: transform 0.3s;
 }
 
 .render-box:hover {
-  transform: scale(1.03);
+  z-index: 3 !important;
+  transform: scale(1.05);
+}
+
+.first-render {
+  top: 0;
+  right: 0;
+  z-index: 2;
+}
+
+.second-render {
+  bottom: 0;
+  left: 0;
+  z-index: 1;
 }
 
 .render-img {
@@ -582,17 +677,211 @@ ul {
   border-radius: 2px;
 }
 
+/* Pro-Inversion Section Styles */
+.pro-inversion-section {
+  padding: 100px 0;
+  position: relative;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  overflow: hidden;
+}
+
+.pro-inversion-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("img/index/imagenfondo4.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.pro-inversion-overlay::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(45, 62, 51, 0.85); /* Deep green overlay */
+}
+
+.pro-inversion-content {
+  position: relative;
+  z-index: 10;
+}
+
+.pro-inversion-content a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.font-20-regular {
+  font-family: var(--font-main);
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+.font-42-black {
+  font-family: var(--font-main);
+  font-weight: 900;
+  font-size: 42px;
+  line-height: 1.2;
+}
+
+/* Ubicacion Hero Detail Styles */
+.ubicacion-hero-proyectos {
+  padding: 120px 0;
+  position: relative;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.ubicacion-hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("img/index/desde arriba.JPG");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.ubicacion-hero-overlay::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(27, 50, 17, 0.65); /* Medium green overlay */
+}
+
+.ubicacion-hero-content {
+  position: relative;
+  z-index: 10;
+}
+
+/* Entorno and Obras Styles */
+.entorno-obras-section {
+  padding: 100px 0;
+  background-color: var(--bg-dark);
+}
+
+.entorno-obras-section ul li {
+  margin-bottom: 12px;
+}
+
+/* Footer & Logo in Projects */
+.footer-logo {
+  height: 80px;
+  margin-bottom: 30px;
+}
+
+/* Surroundings Characteristics Section Styles */
+.surroundings-characteristics-section {
+  padding: 120px 0;
+  position: relative;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.surroundings-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("img/ubicacion/caracteristicas-de-entorno.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.surroundings-overlay::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(27, 50, 17, 0.7); /* Deep green overlay */
+}
+
+.surroundings-content {
+  position: relative;
+  z-index: 10;
+}
+
+.surroundings-highlights {
+  line-height: 1.8;
+}
+
+.btn-primary-white {
+  background: #fff;
+  color: #c55317; /* Same orange as other primary buttons */
+  border: none;
+  padding: 15px 40px;
+  font-size: 22px;
+  font-weight: 700;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: inline-block;
+  text-decoration: none !important;
+}
+
+.btn-primary-white:hover {
+  background: #f0f0f0;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
 /* Responsive fixes for Projects */
 @media (max-width: 991px) {
   .etapas-content {
-    grid-template-columns: 1fr;
     text-align: center;
   }
   .etapas-visuals {
-    order: -1;
-    margin-bottom: 40px;
+    height: 400px;
+    margin-top: 50px;
+  }
+  .hero-projects {
+    height: 70vh;
   }
   .hero-projects-text p {
-    font-size: 24px;
+    font-size: 22px;
+  }
+  .btn-primary-alt {
+    font-size: 20px;
+    padding: 12px 30px;
+  }
+  .pro-inversion-section {
+    padding: 60px 0;
+  }
+  .font-22-bold {
+    font-size: 18px;
+  }
+  .ubicacion-hero-proyectos {
+    padding: 80px 0;
+  }
+  .font-42-black {
+    font-size: 32px;
+  }
+  .entorno-obras-section {
+    padding: 60px 0;
   }
 }
+
+

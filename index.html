@@ -14,6 +14,13 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap"
       rel="stylesheet"
     />
+    <!-- Bootstrap 5 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" type="image/png" href="img/favicon.png" />
   </head>
@@ -25,10 +32,10 @@
         </div>
         <nav class="main-nav" id="main-nav">
           <ul>
-            <li><a href="#inicio">INICIO</a></li>
-            <li><a href="#proyecto">PROYECTO</a></li>
-            <li><a href="#ubicacion">UBICACIÓN</a></li>
-            <li><a href="#contactos">CONTACTOS</a></li>
+            <li><a href="index.html">INICIO</a></li>
+            <li><a href="proyectos.html">PROYECTO</a></li>
+            <li><a href="ubicacion.html">UBICACIÓN</a></li>
+            <li><a href="index.html#contactos">CONTACTOS</a></li>
           </ul>
         </nav>
         <button class="nav-toggle" aria-label="Abrir menú">
@@ -54,7 +61,7 @@
               Te presentamos una propuesta de desarrollo familiar para los
               amantes de la naturaleza que priorizan un estilo de vida diferente
             </p>
-            <button class="btn-primary" id="btn-conocenos">
+            <button class="btn-primary" data-bs-toggle="modal" data-bs-target="#download-modal">
               Conocé el proyecto
             </button>
           </div>
@@ -131,44 +138,43 @@
       </section>
 
       <!-- ProMendoza Section -->
-      <section class="partners-section">
-        <div class="container partner-grid">
-          <div class="partner-image">
-            <a href="proyectos.html">
-              <img src="img/reparacion.jpeg" alt="Alianza ProMendoza" />
-              <div class="partner-logo-box">
-                <img src="img/logo.png" alt="ProMendoza Logo" />
+      <section class="promendoza-section">
+        <div class="container-fluid">
+          <div class="row promendoza-image">
+            <div class="col-3 d-flex justify-content-center align-items-end">
+              <img
+                src="img/index/logopromendoza.png"
+                class="logo-promendoza img-fluid"
+                alt=""
+              />
+            </div>
+            <div class="col-9 p-0">
+              <div class="promendoza-content">
+                <h3 class="promendoza-title">
+                  <em>Complejo El Altillo</em> incorporado al<br />
+                  Banco de Inversión de ProMendoza
+                </h3>
+                <a href="proyectos.html" class="btn-promendoza"
+                  >Conocer la iniciativa</a
+                >
+                <p class="promendoza-text">
+                  Está integrada por El Gobierno de la Provincia de Mendoza, La
+                  Bolsa de Comercio de Mendoza, La Union Comercial e Industrial
+                  de Mendoza (UCIM) y la Federación Económica de Mendoza (FEM) y
+                  posiciona a Mendoza como un destino atractivo para las
+                  inversiones extranjeras
+                </p>
               </div>
-            </a>
-          </div>
-          <div class="partner-content">
-            <h3 class="font-49-black">
-              Complejo El Altillo incorporado al Banco de Inversión de
-              ProMendoza
-            </h3>
-            <a href="proyectos.html" class="btn-outline"
-              >Conocer la iniciativa</a
-            >
-            <p class="font-29-bold">
-              Está integrada por El Gobierno de la Provincia de Mendoza, La
-              Bolsa de Comercio de Mendoza, La Unión Comercial e Industrial de
-              Mendoza (UCIM) y la Federación Económica de Mendoza (FEM) y
-              posiciona a Mendoza como un destino atractivo para las inversiones
-              extranjeras
-            </p>
-          </div>
-        </div>
+            </div>
       </section>
+      <div class="row d-flex align-items-center">
+        <div class="col-3 seccion-links">
 
-      <!-- News Section -->
-      <section class="news-section">
-        <div class="container">
-          <h2>Links de diarios</h2>
-          <div class="news-grid">
-            <!-- News placeholders -->
-          </div>
         </div>
-      </section>
+        <div class="col-9 justify-content-center">
+          <h2>Links de diarios</h2>
+        </div>
+      </div>
 
       <!-- Location Section -->
       <section id="ubicacion" class="location-section">
@@ -228,39 +234,40 @@
     </main>
 
     <!-- Modal for Downloads -->
-    <div id="download-modal" class="modal">
-      <div class="modal-content">
-        <span class="close-modal">&times;</span>
-        <h2>Documentación del Proyecto</h2>
-        <div class="download-list">
-          <a
-            href="img/panel proyecto viviendas.pdf"
-            target="_blank"
-            class="download-item"
-          >
-            <span>Panel Proyecto Viviendas</span>
-            <button>Descargar</button>
-          </a>
-          <a
-            href="img/ANEXO III -Deck Inversiones El Altillo.pdf"
-            target="_blank"
-            class="download-item"
-          >
-            <span>Anexo III - Deck Inversiones</span>
-            <button>Descargar</button>
-          </a>
-          <a
-            href="img/ANEXO IV- Estudio Movilidad El Altillo.pdf"
-            target="_blank"
-            class="download-item"
-          >
-            <span>Anexo IV - Estudio Movilidad</span>
-            <button>Descargar</button>
-          </a>
+    <div class="modal fade" id="download-modal" tabindex="-1" aria-labelledby="downloadModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header border-0">
+            <h2 class="modal-title fs-5" id="downloadModalLabel">Documentación del Proyecto</h2>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="download-list">
+              <a href="img/panel proyecto viviendas.pdf" target="_blank" class="download-item">
+                <span>Panel Proyecto Viviendas</span>
+                <button class="btn btn-sm btn-outline-dark">Descargar</button>
+              </a>
+              <a href="img/ANEXO III -Deck Inversiones El Altillo.pdf" target="_blank" class="download-item">
+                <span>Anexo III - Deck Inversiones</span>
+                <button class="btn btn-sm btn-outline-dark">Descargar</button>
+              </a>
+              <a href="img/ANEXO IV- Estudio Movilidad El Altillo.pdf" target="_blank" class="download-item">
+                <span>Anexo IV - Estudio Movilidad</span>
+                <button class="btn btn-sm btn-outline-dark">Descargar</button>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
 
+
+    <!-- Bootstrap 5 JS Bundle (incluye Popper) -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
     <script src="script.js"></script>
   </body>
 </html>
