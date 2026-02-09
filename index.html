@@ -14,6 +14,10 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap"
       rel="stylesheet"
     />
+
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
     <!-- Bootstrap 5 CSS -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
@@ -28,7 +32,9 @@
     <header class="main-header">
       <div class="container header-content">
         <div class="logo">
-          <img src="img/logoaltillo.png" alt="Barrio El Altillo Logo" />
+          <a href="index.html">
+            <img src="img/logoaltillo.png" alt="Barrio El Altillo Logo" />
+          </a>
         </div>
         <nav class="main-nav" id="main-nav">
           <ul>
@@ -50,7 +56,7 @@
       <!-- Hero Section -->
       <section id="inicio" class="hero">
         <div class="hero-bg"></div>
-        <div class="container hero-content">
+        <div class="container hero-content" data-aos="fade-up">
           <div class="hero-card">
             <h1>
               Barrio Sustentable entre Olivos en<br /><span
@@ -61,7 +67,11 @@
               Te presentamos una propuesta de desarrollo familiar para los
               amantes de la naturaleza que priorizan un estilo de vida diferente
             </p>
-            <button class="btn-primary" data-bs-toggle="modal" data-bs-target="#download-modal">
+            <button
+              class="btn-primary"
+              data-bs-toggle="modal"
+              data-bs-target="#download-modal"
+            >
               Conocé el proyecto
             </button>
           </div>
@@ -69,17 +79,21 @@
       </section>
 
       <!-- Vivir en Equilibrio Section -->
-      <section id="proyecto" class="vivir-equilibrio">
+      <section id="proyecto" class="vivir-equilibrio" data-aos="fade-up">
         <div class="container container-narrow">
-          <div class="section-icon">
+          <div class="section-icon" data-aos="zoom-in">
             <img
               src="img/index/casita.png"
               alt="Icono Casita"
               class="house-leaf-icon"
             />
           </div>
-          <h2 class="font-49-black">Vivir en equilibrio</h2>
-          <div class="content font-29-bold">
+          <h2 class="font-49-black" data-aos="fade-up">Vivir en equilibrio</h2>
+          <div
+            class="content font-24-regular"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
             <p>Vivir en equilibrio y armonía con lo natural.</p>
             <p>
               Desde su inicio fue pensado para integrarse al entorno,
@@ -104,16 +118,15 @@
               una reducción de la huella de carbono y una disminución de los
               costos operativos. Constituye un activo de alta apreciación en el
               mediano y largo plazo, alineado con las tendencias globales de
-              inversión ESG (Ambiental, Social y de Gobernanza).
+              investment ESG (Ambiental, Social y de Gobernanza).
             </p>
           </div>
         </div>
       </section>
-
       <!-- Video & Gallery Section -->
-      <section class="media-section">
+      <section class="media-section" data-aos="fade-up">
         <div class="container">
-          <div class="video-container">
+          <div class="video-container" data-aos="fade-right">
             <!-- Placeholder for video -->
             <div class="video-placeholder">
               <video
@@ -126,7 +139,7 @@
               <div class="play-button"></div>
             </div>
           </div>
-          <div class="gallery-container">
+          <div class="gallery-container" data-aos="fade-left">
             <img
               src="img/index/tranquilidad y aire.jpg"
               alt="Tranquilidad y aire de campo"
@@ -138,17 +151,20 @@
       </section>
 
       <!-- ProMendoza Section -->
-      <section class="promendoza-section">
+      <section class="promendoza-section" data-aos="fade-up">
         <div class="container-fluid">
-          <div class="row promendoza-image">
-            <div class="col-3 d-flex justify-content-center align-items-end">
+          <div class="row promendoza-image align-items-center">
+            <div
+              class="col-lg-3 d-flex justify-content-center"
+              data-aos="zoom-in"
+            >
               <img
                 src="img/index/logopromendoza.png"
                 class="logo-promendoza img-fluid"
-                alt=""
+                alt="Logo ProMendoza"
               />
             </div>
-            <div class="col-9 p-0">
+            <div class="col-lg-9 p-0" data-aos="fade-left">
               <div class="promendoza-content">
                 <h3 class="promendoza-title">
                   <em>Complejo El Altillo</em> incorporado al<br />
@@ -166,20 +182,13 @@
                 </p>
               </div>
             </div>
+          </div>
+        </div>
       </section>
-      <div class="row d-flex align-items-center">
-        <div class="col-3 seccion-links">
-
-        </div>
-        <div class="col-9 justify-content-center">
-          <h2>Links de diarios</h2>
-        </div>
-      </div>
 
       <!-- Location Section -->
-      <section id="ubicacion" class="location-section">
-        <div class="map-container">
-          <!-- Google Maps Embed Placeholder -->
+      <section id="ubicacion" class="location-section" data-aos="fade-up">
+        <div class="map-container" data-aos="fade-in" data-aos-delay="300">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3350.5!2d-68.7!3d-32.9!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzLCsDU0JzAwLjAiUyA2OMKwNDInMDAuMCJX!5e0!3m2!1ses!2sar!4v1620000000000!5m2!1ses!2sar"
             width="100%"
@@ -193,9 +202,9 @@
       </section>
 
       <!-- Contact Section -->
-      <section id="contactos" class="contact-section">
+      <section id="contactos" class="contact-section" data-aos="fade-up">
         <div class="container contact-grid">
-          <div class="contact-info">
+          <div class="contact-info" data-aos="fade-right" data-aos-delay="200">
             <img
               src="img/logoaltillo.png"
               alt="Barrio El Altillo"
@@ -208,7 +217,7 @@
               paso.
             </p>
           </div>
-          <div class="contact-form">
+          <div class="contact-form" data-aos="fade-left" data-aos-delay="400">
             <form action="#">
               <div class="form-group">
                 <label for="nombre">Nombre</label>
@@ -234,24 +243,49 @@
     </main>
 
     <!-- Modal for Downloads -->
-    <div class="modal fade" id="download-modal" tabindex="-1" aria-labelledby="downloadModalLabel" aria-hidden="true">
+    <div
+      class="modal fade"
+      id="download-modal"
+      tabindex="-1"
+      aria-labelledby="downloadModalLabel"
+      aria-hidden="true"
+    >
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-header border-0">
-            <h2 class="modal-title fs-5" id="downloadModalLabel">Documentación del Proyecto</h2>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <h2 class="modal-title fs-5" id="downloadModalLabel">
+              Documentación del Proyecto
+            </h2>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
           </div>
           <div class="modal-body">
             <div class="download-list">
-              <a href="img/panel proyecto viviendas.pdf" target="_blank" class="download-item">
+              <a
+                href="img/panel proyecto viviendas.pdf"
+                target="_blank"
+                class="download-item"
+              >
                 <span>Panel Proyecto Viviendas</span>
                 <button class="btn btn-sm btn-outline-dark">Descargar</button>
               </a>
-              <a href="img/ANEXO III -Deck Inversiones El Altillo.pdf" target="_blank" class="download-item">
+              <a
+                href="img/ANEXO III -Deck Inversiones El Altillo.pdf"
+                target="_blank"
+                class="download-item"
+              >
                 <span>Anexo III - Deck Inversiones</span>
                 <button class="btn btn-sm btn-outline-dark">Descargar</button>
               </a>
-              <a href="img/ANEXO IV- Estudio Movilidad El Altillo.pdf" target="_blank" class="download-item">
+              <a
+                href="img/ANEXO IV- Estudio Movilidad El Altillo.pdf"
+                target="_blank"
+                class="download-item"
+              >
                 <span>Anexo IV - Estudio Movilidad</span>
                 <button class="btn btn-sm btn-outline-dark">Descargar</button>
               </a>
@@ -261,13 +295,14 @@
       </div>
     </div>
 
-
-    <!-- Bootstrap 5 JS Bundle (incluye Popper) -->
+    <!-- Bootstrap 5 JS Bundle -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="script.js"></script>
   </body>
 </html>

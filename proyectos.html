@@ -10,6 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap"
       rel="stylesheet"
     />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <!-- Bootstrap 5 CSS -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
@@ -46,15 +47,19 @@
 
     <main>
       <!-- Hero Projects Section -->
-      <section class="hero-projects">
+      <section class="hero-projects" data-aos="fade-up">
         <div class="hero-projects-bg"></div>
         <div class="container hero-projects-content">
-          <div class="hero-projects-text">
-            <p class="font-29-bold">
+          <div
+            class="hero-projects-text"
+            data-aos="fade-right"
+            data-aos-delay="200"
+          >
+            <p class="font-25-regular">
               El proyecto inmobiliario sustentable ubicado en Guaymallén,
               Mendoza, que propone una nueva manera de urbanizar.
             </p>
-            <p class="font-29-bold">
+            <p class="font-25-regular">
               Desde su concepción, el proyecto fue diseñado para integrarse al
               entorno existente, conservando los olivares y la identidad natural
               del lugar.
@@ -64,11 +69,15 @@
       </section>
 
       <!-- Etapas Section -->
-      <section class="etapas-section">
+      <section class="etapas-section" data-aos="fade-up">
         <div class="etapas-overlay"></div>
         <div class="container etapas-grid">
           <div class="row align-items-center">
-            <div class="col-lg-6 mb-5 mb-lg-0">
+            <div
+              class="col-lg-6 mb-5 mb-lg-0"
+              data-aos="fade-right"
+              data-aos-delay="200"
+            >
               <h2 class="font-49-black mb-4">
                 El Complejo Altillo – Barrio Sustentable
               </h2>
@@ -88,26 +97,33 @@
                   <p class="font-24-regular">Sustentable - en desarrollos</p>
                 </div>
                 <div class="etapas-cta mt-5">
-                  <button
+                  <a
+                    href="img/proyectos/panel proyecto viviendas .pdf"
+                    target="_blank"
                     class="btn-primary-alt"
-                    data-bs-toggle="modal"
-                    data-bs-target="#download-modal"
+                    >Ver Master Plano</a
                   >
-                    Ver Master Plano
-                  </button>
                 </div>
               </div>
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-6" data-aos="fade-left" data-aos-delay="400">
               <div class="etapas-visuals">
-                <div class="render-box first-render">
+                <div
+                  class="render-box first-render"
+                  data-aos="zoom-in"
+                  data-aos-delay="600"
+                >
                   <img
                     src="img/index/imagen5.png"
                     alt="Render Vivienda 1"
                     class="render-img"
                   />
                 </div>
-                <div class="render-box second-render">
+                <div
+                  class="render-box second-render"
+                  data-aos="zoom-in"
+                  data-aos-delay="800"
+                >
                   <img
                     src="img/index/imagen6.png"
                     alt="Render Vivienda 2"
@@ -121,9 +137,13 @@
       </section>
 
       <!-- Pro-Inversion Section -->
-      <section class="pro-inversion-section">
+      <section class="pro-inversion-section" data-aos="fade-up">
         <div class="pro-inversion-overlay"></div>
-        <div class="container pro-inversion-content">
+        <div
+          class="container pro-inversion-content"
+          data-aos="zoom-in"
+          data-aos-delay="200"
+        >
           <div class="row justify-content-center">
             <div class="col-lg-10">
               <div class="text-content text-center">
@@ -191,7 +211,7 @@
           <div class="row">
             <!-- Entorno -->
             <div class="col-lg-5 mb-5 mb-lg-0">
-              <h2 class="font-42-black text-white mb-4">
+              <h2 class="font-29-bold text-white mb-4">
                 1-Entorno. Cercania, movilidad
               </h2>
               <ul class="list-unstyled text-white font-20-regular">
@@ -213,7 +233,7 @@
             </div>
             <!-- Obras -->
             <div class="col-lg-7">
-              <h2 class="font-42-black text-white mb-4">
+              <h2 class="font-29-bold text-white mb-4">
                 2-Nuevas obras municipales en curso
               </h2>
               <ul class="list-unstyled text-white font-20-regular">
@@ -268,8 +288,23 @@
           </div>
         </div>
       </section>
+      <!-- Contact Section -->
+      <section id="contactos" class="contact-section" data-aos="fade-up">
+        <div class="container contact-grid">
+          <div class="contact-info" data-aos="fade-right" data-aos-delay="200">
+            <img
+              src="img/logoaltillo.png"
+              alt="Barrio El Altillo"
+              class="footer-logo"
+            />
+            <h3 class="font-29-bold">¿Querés saber más sobre El Altillo?</h3>
+            <p class="font-29-regular">
+              Completá el formulario y nuestro equipo se pondrá en contacto para
+              brindarte información, resolver tus dudas y acompañarte en cada
+              paso.
+            </p>
           </div>
-          <div class="contact-form">
+          <div class="contact-form" data-aos="fade-left" data-aos-delay="400">
             <form action="#">
               <div class="form-group">
                 <label for="nombre">Nombre</label>
@@ -353,6 +388,7 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
