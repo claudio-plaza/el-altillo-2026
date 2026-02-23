@@ -977,7 +977,8 @@ padding: 50px 0;
 
 /* Footer & Logo in Projects */
 .footer-logo {
-  height: 80px;
+  object-fit: cover;
+  height: 210px;
   margin-bottom: 30px;
 }
 
