@@ -122,20 +122,38 @@
               <div class="play-button"></div>
             </div>
           </div>
-          <div class="gallery-container" data-aos="fade-left">
-            <img
-              src="img/index/tranquilidad y aire.jpg"
-              alt="Tranquilidad y aire de campo"
-              class="gallery-img"
-            />
-            <div class="gallery-caption">Tranquilidad y aire de campo</div>
-          </div>
+          <div id="carouselExample" class="carousel slide">
+<div id="carouselExampleFade" class="carousel slide carousel-fade">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="img/index/foto1.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="img/index/foto2.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="img/index/foto3.jpg" class="d-block w-100" alt="...">
+    </div>
+        <div class="carousel-item">
+      <img src="img/index/foto4.jpg" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
         </div>
       </section>
 
       <!-- ProMendoza Section -->
       <section class="promendoza-section">
-        <div class="container-promendoza">
+        <div class="container-promendoza ">
           <div class="row">
             <div
               class="col-lg-3 d-flex justify-content-center align-items-center"
@@ -298,7 +316,7 @@
               </div>
               <div class="form-group">
                 <label for="tel">Teléfono</label>
-                <input type="tel" id="tel" name="tel" />
+                <input type="tel" id="tel" name="telefono" required />
               </div>
               <div class="form-group">
                 <label for="mensaje">Mensaje</label>

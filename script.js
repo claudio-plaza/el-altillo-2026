@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   navToggle.addEventListener("click", () => {
     mainNav.classList.toggle("active");
+    navToggle.classList.toggle("active");
   });
 
   // Navigation logic (previously Modal logic was here, now handled by Bootstrap)
@@ -31,13 +32,47 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Simple Form Submission (Frontend only)
+  // Form Submission to PHP backend
   const contactForm = document.querySelector(".contact-form form");
   if (contactForm) {
-    contactForm.addEventListener("submit", (e) => {
+    contactForm.addEventListener("submit", async (e) => {
       e.preventDefault();
-      alert("Gracias por tu mensaje. Nos pondremos en contacto pronto.");
-      contactForm.reset();
+      const btn = contactForm.querySelector('button[type="submit"]');
+      const originalText = btn.textContent;
+      btn.textContent = "Enviando...";
+      btn.disabled = true;
+
+      const data = {
+        nombre: contactForm.querySelector('[name="nombre"]').value,
+        email: contactForm.querySelector('[name="email"]').value,
+        telefono: contactForm.querySelector('[name="telefono"]').value,
+        mensaje: contactForm.querySelector('[name="mensaje"]').value,
+      };
+
+      try {
+        const res = await fetch("contaco.php", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(data),
+        });
+        const result = await res.json();
+        if (result.success) {
+          btn.textContent = "¡Enviado!";
+          btn.style.backgroundColor = "#28a745";
+          contactForm.reset();
+          setTimeout(() => {
+            btn.textContent = originalText;
+            btn.style.backgroundColor = "";
+            btn.disabled = false;
+          }, 3000);
+        } else {
+          throw new Error(result.message);
+        }
+      } catch (err) {
+        alert(err.message || "Error al enviar el mensaje. Intentá de nuevo.");
+        btn.textContent = originalText;
+        btn.disabled = false;
+      }
     });
   }
 });

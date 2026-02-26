@@ -22,10 +22,12 @@ body {
   color: var(--text-color);
   line-height: 1.6;
   overflow-x: hidden;
+  word-wrap: break-word;
 }
 
-img {
+img, video {
   max-width: 100%;
+  height: auto;
   display: block;
 }
 
@@ -47,6 +49,7 @@ ul {
 .container-narrow {
   max-width: var(--container-narrow);
   margin: 0 auto;
+  padding: 35px;
 }
 
 /* Header & Nav */
@@ -101,6 +104,18 @@ ul {
   height: 3px;
   background: var(--text-color);
   transition: 0.3s;
+}
+
+.nav-toggle.active .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.nav-toggle.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-toggle.active .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
 }
 
 /* Hero Section */
@@ -249,13 +264,19 @@ ul {
 .media-section {
   background: var(--bg-dark);
   padding-bottom: 100px;
+}
+
+.media-section .container {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
 }
 
 .video-container,
 .gallery-container {
-  margin-bottom: 50px;
+  flex: 1 1 450px;
+  max-width: 100%;
   position: relative;
   padding: 4px;
 }
@@ -291,14 +312,13 @@ ul {
 
 /* ProMendoza Section */
 .promendoza-section {
-  display: flex;
   background-image: url("img/index/fondo-banco-de-inversion.png");
-
+  background-size: cover;
+  background-position: center;
 }
 .container-promendoza{
-  background-color: #ac6d4091;
-  margin: 0 auto;
-  padding: 50px 0;
+  background-color: #ac6d40c5; /* Slightly more opaque background */
+  padding: 60px 15px; /* Add horizontal padding for mobile */
 }
 .logo-promendoza {
   width: 50% !important;
@@ -675,6 +695,43 @@ padding: 50px 0;
   .hero-card p {
     font-size: 20px;
   }
+
+  /* Responsive Nav */
+  .header-content {
+    padding: 0 20px;
+  }
+
+  .nav-toggle {
+    display: flex;
+    z-index: 1001;
+  }
+
+  .main-nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    max-width: 300px;
+    height: 100vh;
+    background: #fff;
+    padding: 100px 40px;
+    transition: 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+
+  .main-nav.active {
+    right: 0;
+  }
+
+  .main-nav ul {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .main-nav a {
+    font-size: 18px;
+  }
 }
 
 /* Projects Page Styles */
@@ -724,7 +781,7 @@ padding: 50px 0;
 }
 
 .etapas-section {
-  padding: 60px 30px;
+  padding: 60px 50px;
   background-color: var(--bg-brown);
   color: #fff;
   position: relative;
@@ -927,7 +984,11 @@ padding: 50px 0;
   font-size: 42px;
   line-height: 1.2;
 }
-
+/*proyecto*/
+.text-proyecto{
+  text-align: justify;
+  padding: 20px 35px;
+}
 /* Ubicacion Hero Detail Styles */
 .ubicacion-hero-proyectos {
   padding: 120px 0;
@@ -967,7 +1028,7 @@ padding: 50px 0;
 
 /* Entorno and Obras Styles */
 .entorno-obras-section {
-  padding: 100px 0;
+  padding: 100px 40px !important;
   background-color: var(--bg-dark);
 }
 
@@ -980,6 +1041,7 @@ padding: 50px 0;
   object-fit: cover;
   height: 210px;
   margin-bottom: 30px;
+  margin:auto;
 }
 
 /* Surroundings Characteristics Section Styles */
